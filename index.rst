@@ -8,17 +8,12 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: 目录:
 
 
    api/abstract.rst
    api/quickstart.rst
+   api/content.rst
 
 
 
-索引和表格
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
