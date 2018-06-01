@@ -23,8 +23,13 @@ grant type               grant_type              string              是        
 .. code-block:: json
 
     {
-        "access_token": "mUmweeZAFy4bvNof8OQL2ORFZs38Lo",
-        "expires_in": 36000,
-        "token_type": "Bearer",
-        "scope": "read",
+        "result_code": "access_token",
+        "result_message": "get access token",
+        "result": {
+            "access_token": "CfbxGeUyjKWW31Fs6EDgF567xCUD9E",
+            "expires_in": 36000,
+            "token_type": "Bearer",
+            "scope": "cancel_ex_order view_order_detail update_order add_ex_order"
+        },
+        "success": true
     }
