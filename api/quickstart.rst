@@ -35,6 +35,21 @@ https://bizapi.yianyouxuan.com
 
    c) sign 为 json_str + client_secret 的32位md5值
 
+   d) python3 示例
+
+    .. code-block:: python
+
+        >>> import json
+        >>> import hashlib
+        >>> client_secret='test'
+        >>> data={'oid':'test001'}
+        >>> raw_str=json.dumps(data, separators=(',', ':')) + client_secret
+        >>> m2=hashlib.md5()
+        >>> m2.update(raw_str.encode())
+        >>> sign=m2.hexdigest()
+        >>> print(raw_str,sign)
+        {"oid":"test001"}test a2d5db80ec2a5d3a1a6783273e040e77
+
 4.	认证方式
 
    a) 每次请求需要将token放入到header: {'Authorization': 'Bearer 14d3de567caaee6f7538f0c297d41cf466a2aa9f'}
@@ -42,4 +57,13 @@ https://bizapi.yianyouxuan.com
 5.	权限控制
 
    a) 返回的token都会带scope，目前默认值都是read。在申请token时需要传递此参数
+
+6. 请求参数中的数值类型需要保留小数点后两位
+
+7. 返回值的通用格式为
+
+    :success: 布尔类型，请求是否成功的标志
+    :result_code: 返回结果状态号
+    :result_message: 返回结果描述
+    :result: 返回结果数据
 
