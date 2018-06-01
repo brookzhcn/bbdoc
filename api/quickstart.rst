@@ -14,8 +14,8 @@ https://bizapi.yianyouxuan.com
 申请流程
 ---------------------------------
 1.	合作商向怡安悠选方面申请client_id，client_secret
-2.	合作商技术人员通过怡安悠选的测试环境uatbizapi.yianyouxuan.com联调(Https)
-3.	合作商正式环境连接到怡安悠选的正式环境bizapi.yianyouxuan.com(Https)
+2.	合作商技术人员通过怡安悠选的测试环境
+3.	合作商正式环境连接到怡安悠选的正式环境
 
 接入指南
 ---------------------------------
@@ -66,4 +66,21 @@ https://bizapi.yianyouxuan.com
     :result_code: 返回结果状态号
     :result_message: 返回结果描述
     :result: 返回结果数据
+
+8. 流量限制
+
+   - 每个合作商每分钟访问不得超过70次
+
+   - 个别API可能会有特殊设置
+
+   - 超出限制，会返回如下结果
+
+    .. code-block:: json
+
+        {
+            "detail": "Request was throttled. Expected available in 14 seconds.",
+            "success": false,
+            "result_code": "throttled",
+            "result_message": "Request was throttled. Expected available in 14 seconds."
+        }
 

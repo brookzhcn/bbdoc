@@ -4,9 +4,9 @@
 
 |
 
-:接口地址: /oauth2/token/
+:接口地址: /api/oauth2/token/
 :http请求方式: POST
-:支持格式: application/x-www-form-urlencoded
+:支持格式: application/json
 :请求参数:
 
 ================         ==============          ========           =========         ======================
