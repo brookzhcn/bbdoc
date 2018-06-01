@@ -7,6 +7,7 @@
 
 
    ref/token.rst
+   ref/exchange_user_info
    ref/view_order.rst
    ref/create_order.rst
    ref/update_order.rst
