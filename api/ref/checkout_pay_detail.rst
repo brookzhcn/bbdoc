@@ -1,10 +1,10 @@
 =========================================
-支付接口
+查询支付信息
 =========================================
 
 |
 
-:接口地址: /api/checkout/pay/
+:接口地址: /api/checkout/payDetail/
 :http请求方式: POST
 :支持格式: application/json
 :权限: point_pay
@@ -13,12 +13,7 @@
 ================         ==============          ========           =========         ======================
 参数说明                  参数名                  类型               是否必须           描述
 ================         ==============          ========           =========         ======================
-out trade number         out_trade_no            string              是               外部订单号
-client pay id            client_pay_id           string              是               支付流水号,必须唯一
-total amount             total_amount            decimal             是               总金额
-shipping fee             shipping_fee            decimal             是               运费
-user                     user                    int                 是               用户id
-redirect url             redirect_url            string              否               完成后跳转地址
+client pay id            client_pay_id           string              是               支付流水号
 timestamp                timestamp               string              是               时间戳
 sign                     sign                    string              是               签名
 ================         ==============          ========           =========         ======================
@@ -49,31 +44,24 @@ sign                     sign                    string              是        
 .. code-block:: json
 
     {
-    "out_trade_no":"20111111111",
-    "client_pay_id":"0000010111135",
-    "total_amount":2144,
-    "shipping_fee":5.00,
-    "redirect_url":"https://www.example.com",
-    "user":"442090"
+     "client_pay_id":"0000010111123"
     }
-
 
 :返回示例:
 
 .. code-block:: json
 
     {
-     "result_message": "",
-     "result_code": "pay_order_created",
-     "result": {
+        "result_message": "",
+        "result_code": "out_trade_detail",
+        "result": {
             "status": "point_paid",
-            "client_pay_id": "0000010111135",
-            "point_amount": 131.28,
-            "cash_amount": 2012.72,
+            "client_pay_id": "0000010111123",
             "out_trade_no": "20111111111",
-            "cash_pay_url": "http://localhost:8001/api_login/?code=mOkR5a9jH42JpQqtGGDpLw9J0H8mnn&next=/checkout/pay/2018060830000035/",
-            "total_amount": 2144
-     },
-     "success": true
+            "point_amount": 0,
+            "cash_amount": 21.44,
+            "cash_pay_url": "http://localhost:8001/checkout/pay/2018060730000019/",
+            "total_amount": 21.44
+        },
+        "success": true
     }
-

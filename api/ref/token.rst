@@ -14,7 +14,7 @@
 ================         ==============          ========           =========         ======================
 client id                client_id               string              是               身份识别号
 client secret            client_secret           string              是               密钥
-scope                    scope                   string              否               权限
+scope                    scope                   string              是               空则返回所有权限
 grant type               grant_type              string              是               client_credentials
 ================         ==============          ========           =========         ======================
 
