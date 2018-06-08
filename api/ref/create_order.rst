@@ -41,7 +41,7 @@ unit price               unit_price              decimal             是        
 - 外部订单价格只做记录，不做实际积分扣减
 - 积分扣减以商品单价和数量乘积和为准
 
-:返回值:
+:返回示例:
 
 .. code-block:: json
 

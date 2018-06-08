@@ -18,7 +18,7 @@ scope                    scope                   string              否        
 grant type               grant_type              string              是               client_credentials
 ================         ==============          ========           =========         ======================
 
-:返回值:
+:返回示例:
 
 .. code-block:: json
 

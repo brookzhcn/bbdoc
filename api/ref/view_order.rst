@@ -18,7 +18,7 @@ timestamp                timestamp               string              是        
 sign                     sign                    string              是               签名
 ================         ==============          ========           =========         ======================
 
-:返回值:
+:返回示例:
 
 .. code-block:: json
 

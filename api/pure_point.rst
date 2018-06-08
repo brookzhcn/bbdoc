@@ -6,3 +6,4 @@
    :maxdepth: 2
 
    ref/token.rst
+   ref/checkout_pay.rst
