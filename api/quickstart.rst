@@ -1,5 +1,5 @@
 =================================
-说明
+快速指南
 =================================
 
 测试环境
@@ -83,4 +83,23 @@ https://bizapi.yianyouxuan.com
             "result_code": "throttled",
             "result_message": "Request was throttled. Expected available in 14 seconds."
         }
+
+
+8. 回调接口
+
+   - 部分信息（例如现金支付结果、退款接口）并不会同步返回给合作商，需要配置notify_url参数，通过异步回调通知合作商
+
+   - 回调接口需要支持POST请求，并且无任何权限认证
+
+   - 合作商接受到请求参数，需要校验签名参数是否正确
+
+   - 成功返回
+
+    .. code-block:: json
+
+       {
+          "success": true
+       }
+
+   - 如果没有收到合作商的成功返回，那么会以以下策略重新发送请求: 1min, 5min, 30min, 1h,12h
 

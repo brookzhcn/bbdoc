@@ -10,3 +10,4 @@
    ref/checkout_pay_detail.rst
    ref/checkout_refund.rst
    ref/checkout_refund_detail.rst
+   ref/callback_payment.rst
