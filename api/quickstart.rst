@@ -93,6 +93,8 @@ https://bizapi.yianyouxuan.com
 
    - 合作商接受到请求参数，需要校验签名参数是否正确
 
+   - 请求参数必有method这个参数，说明通知类型
+
    - 成功返回
 
     .. code-block:: json

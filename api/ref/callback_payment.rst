@@ -6,6 +6,7 @@
 
 :接口地址: 客户端配置的notify_url参数
 :http请求方式: POST
+:method: payment
 :支持格式: application/json
 :参数:
 
