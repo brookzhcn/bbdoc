@@ -12,6 +12,7 @@
 
    api/abstract.rst
    api/quickstart.rst
+   api/auth.rst
    api/content.rst
 
 

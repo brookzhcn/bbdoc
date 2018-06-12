@@ -18,6 +18,17 @@ scope                    scope                   string              是        
 grant type               grant_type              string              是               client_credentials
 ================         ==============          ========           =========         ======================
 
+:请求示例:
+
+.. code-block:: json
+
+    {
+	"client_id":"YiBIyM1f0avW3ScmYSdiLhEdWoSPlsXbjO5or8pl",
+	"client_secret":"JvJoSxf4aAzGNIwcek8t0EjCOdrcFPFDjb2fswuvLZanFN6Qjq9QahHH0LMkG9QS8GWBnNIBDWV1mXijQfXihYJwGMq82JsNwwAAG5NJhPVv00xQBswUjZn9qHR1PZDC",
+	"grant_type":"client_credentials",
+	"scope":""
+     }
+
 :返回示例:
 
 .. code-block:: json
