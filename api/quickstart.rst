@@ -85,7 +85,7 @@ https://bizapi.yianyouxuan.com
         }
 
 
-8. 回调接口
+9. 回调接口
 
    - 部分信息（例如现金支付结果、退款接口）并不会同步返回给合作商，需要配置notify_url参数，通过异步回调通知合作商
 
@@ -104,4 +104,14 @@ https://bizapi.yianyouxuan.com
        }
 
    - 如果没有收到合作商的成功返回，那么会以以下策略重新发送请求: 1min, 5min, 30min, 1h,12h
+
+10. 版本控制
+
+  - 考虑到API版本未来可能会升级，目前加入版本控制特性
+
+  - 请求中需要加入header, Accept:"application/vnd.aon.youxuan+json; version=1.0
+
+  - 返回结果header, Content-Type →application/vnd.aon.youxuan+json
+
+  - 默认版本为1.0
 

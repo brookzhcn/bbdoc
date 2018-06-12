@@ -4,7 +4,7 @@
 
 |
 
-:接口地址: /api/checkout/payDetail/
+:接口地址: /api/checkout/pay-detail/
 :http请求方式: POST
 :支持格式: application/json
 :权限: point_pay

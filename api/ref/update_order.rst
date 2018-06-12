@@ -5,7 +5,7 @@
 |
 
 :说明: 目前只支持更新备注
-:接口地址: /api/order/updateOrderByExtNum/
+:接口地址: /api/order/update-order-by-ext-num/
 :http请求方式: POST
 :支持格式: application/json
 :权限: update_order

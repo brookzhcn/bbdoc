@@ -4,7 +4,7 @@
 
 |
 
-:接口地址: /api/order/cancelExternalOrder/
+:接口地址: /api/order/cancel-external-order/
 :http请求方式: POST
 :支持格式: application/json
 :权限: cancel_ex_order

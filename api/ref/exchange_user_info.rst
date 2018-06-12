@@ -5,7 +5,7 @@
 |
 
 :说明: BB网站跳转到合作商网站时会携带code参数
-:接口地址: /api/oauth2/getUserInfo/　
+:接口地址: /api/oauth2/get-user-info/　
 :http请求方式: POST
 :支持格式: application/json
 :权限: read
