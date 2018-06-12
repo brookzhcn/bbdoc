@@ -109,9 +109,13 @@ https://bizapi.yianyouxuan.com
 
   - 考虑到API版本未来可能会升级，目前加入版本控制特性
 
-  - 请求中需要加入header, Accept:"application/vnd.aon.youxuan+json; version=1.0
+  - 请求中需要加入header
+     + Accept: application/vnd.aon.youxuan+json; version=1.0
 
-  - 返回结果header, Content-Type →application/vnd.aon.youxuan+json
+  - 返回结果header
+     + Content-Type: application/vnd.aon.youxuan+json
 
   - 默认版本为1.0
+
+11. encoding: utf-8
 
