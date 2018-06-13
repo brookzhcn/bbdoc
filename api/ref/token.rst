@@ -4,6 +4,7 @@
 
 |
 
+:说明: 合作方在访问怡安优选api时，首先需要获取token，token的时效是10小时
 :接口地址: /api/oauth2/token/
 :http请求方式: POST
 :支持格式: application/json

@@ -17,7 +17,8 @@ out trade number         out_trade_no            string              是        
 client pay id            client_pay_id           string              是               支付流水号,必须唯一
 total amount             total_amount            decimal             是               总金额
 shipping fee             shipping_fee            decimal             是               运费
-user                     user                    int                 是               用户id
+user id                  user_id                 int                 是               用户id,唯一标识
+employee no              ee_no                   string              是               员工号，用以校验用户信息
 redirect url             redirect_url            string              否               完成后跳转地址
 timestamp                timestamp               string              是               时间戳
 sign                     sign                    string              是               签名
@@ -54,7 +55,8 @@ sign                     sign                    string              是        
     "total_amount":2144,
     "shipping_fee":5.00,
     "redirect_url":"https://www.example.com",
-    "user":"442090"
+    "user_id":"442090",
+    "ee_no":"a09999"
     }
 
 
