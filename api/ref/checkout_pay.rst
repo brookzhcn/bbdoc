@@ -13,16 +13,20 @@
 ================         ==============          ========           =========         ======================
 参数说明                  参数名                  类型               是否必须           描述
 ================         ==============          ========           =========         ======================
-out trade number         out_trade_no            string              是               外部订单号
-client pay id            client_pay_id           string              是               支付流水号,必须唯一
-total amount             total_amount            decimal             是               总金额
-shipping fee             shipping_fee            decimal             是               运费
+out trade number         out_trade_no            string              是               外部订单号（可以为空）
+client pay id            client_pay_id           string              是               支付流水号（可以为空）
+total amount             total_amount            decimal             是               总金额(包含运费）
+shipping fee             shipping_fee            decimal             是               运费（用于记账和运费退款）
 user id                  user_id                 int                 是               用户id,唯一标识
 employee no              ee_no                   string              是               员工号，用以校验用户信息
 redirect url             redirect_url            string              否               完成后跳转地址
 timestamp                timestamp               string              是               时间戳
 sign                     sign                    string              是               签名
 ================         ==============          ========           =========         ======================
+
+.. role:: red
+
+:red:`*out_trade_no 和 client_pay_id 不可以同时为空，两个都传时，都必须保证唯一*`
 
 :返回值:
 
@@ -44,6 +48,7 @@ sign                     sign                    string              是        
 
 + *cash_amount: 现在支付金额*
 
++ *bb_trade_no: 怡安优选商城订单号*
 
 :请求示例:
 
@@ -74,7 +79,8 @@ sign                     sign                    string              是        
             "cash_amount": 2012.72,
             "out_trade_no": "20111111111",
             "cash_pay_url": "http://localhost:8001/api_login/?code=mOkR5a9jH42JpQqtGGDpLw9J0H8mnn&next=/checkout/pay/2018060830000035/",
-            "total_amount": 2144
+            "total_amount": 2144,
+            "bb_trade_no": "2018061530000035"
      },
      "success": true
     }
