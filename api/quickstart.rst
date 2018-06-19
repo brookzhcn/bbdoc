@@ -52,7 +52,8 @@ https://bizapi.yianyouxuan.com
 
 4.	认证方式
 
-   a) 每次请求需要将token放入到header: {'Authorization': 'Bearer 14d3de567caaee6f7538f0c297d41cf466a2aa9f'}
+   a) 每次请求需要将token放入到header（需要加Bearer前缀，和token用空格分开），例如：
+       {'Authorization': 'Bearer 14d3de567caaee6f7538f0c297d41cf466a2aa9f'}
 
 5.	权限控制
 
